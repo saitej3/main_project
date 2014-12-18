@@ -1,0 +1,9 @@
+<%= form_for(@micropost, html: { multipart: true }) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Place Your order..." %>
+  </div>
+  <%= f.submit "Order", class: "btn btn-primary" %>
+
+<% end %>
+
